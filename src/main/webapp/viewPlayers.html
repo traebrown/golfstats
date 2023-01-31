@@ -1,0 +1,32 @@
+
+<div class="card mt-3">
+	<div class="card-header bg-success">
+		<h4>Search For Players</h4>
+		<button class="btn btn-light" ng-click="getAllPlayers()">Refresh Players</button>
+	</div>
+	<div class="card-body">
+		<table class="table table-hover ">
+			<thead class="thead-light">
+				<tr>
+					<th>Player ID</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>City</th>
+					<th>State</th>					
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="player in players" ng-click="goToUpdateView(player.idPlayer)">
+					<td>{{player.idPlayer}}</td>
+					<td>{{player.firstName}}</td>
+					<td>{{player.lastName}}</td>
+					<td>{{player.city}}</td>
+					<td>{{player.state}}</td>					
+				</tr>
+			</tbody>		
+		</table>	
+	</div>
+	<div class="card-footer bg-success">
+		Please select a player to update/delete
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="card mt-3">
+	<div class="card-header bg-success">
+		<h4>View Scorecards</h4>
+	</div>
+	<div class="card-body">
+		<table class="table table-hover ">
+			<thead class="thead-light">
+				<tr>
+					<th>Player ID</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Venue ID</th>
+					<th>Scorecard ID</th>
+					<th>To Par</th>
+					<th>Score</th>
+					<th>Create Date</th>					
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="scorecard in scorecards">
+					<td>{{scorecard.idPlayer}}</td>
+					<td>{{scorecard.firstName}}</td>
+					<td>{{scorecard.lastName}}</td>
+					<td>{{scorecard.idVenue}}</td>
+					<td>{{scorecard.scoreCardId}}</td>
+					<td>{{scorecard.toPar}}</td>
+					<td>{{scorecard.score}}</td>
+					<td>{{scorecard.createDateTime}}</td>					
+				</tr>
+			</tbody>		
+		</table>	
+	</div>
+	<div class="card-footer bg-success">
+		Please select a View
+	</div>
+</div>

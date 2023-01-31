@@ -1,0 +1,14 @@
+
+#stackBackground {
+	background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg');
+	background-size: cover;
+	
+	
+	
+}
+
+
+#mainBackground {
+	background-image: url('https://media.istockphoto.com/id/1318713736/photo/golf-player-making-a-successful-stroke-links-golf.jpg?b=1&s=170667a&w=0&k=20&c=N5bAQLZLda0G64IAQKD2pntnPMHMfCxc8JVsXW38NBg=');
+	background-size: cover;
+}

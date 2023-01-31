@@ -1,0 +1,97 @@
+<style>
+	body {
+	  background: url(image/golf/tigerthree.JPG) no-repeat center center fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+</style>
+
+<div class="row pt-3">
+	<div class="col-sm-3">			
+	</div>
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header text-center">
+				<h3>Create Scorecard</h3>
+				<h5 class="text-success" ng-bind="createStatus"></h5>
+			</div>			
+			<div class="card-body">
+			<form name="createForm">
+				<div class="form-group">
+					<label for="idPlayer" class="font-weight-bold">Player ID</label>
+					<!--  <input ng-model="scorecard.idPlayer" required
+						type="number" class="form-control" id="idPlayer" name="idPlayer">-->
+						<select name="idPlayer" ng-model="scorecard.idPlayer">
+      <option value="">-- select player --</option>
+      <option value="4">Trae Brown</option>
+      <option value="1">Taylor Marr</option>
+      <option value="2">Chance Jackson</option>
+      <option value="5">Reese Marr</option>
+      <option value="6">Daniel Lazenby</option>
+    </select>
+											
+					<span ng-show="createForm.idPlayer.$touched && createForm.idPlayer.$invalid"
+						class="text-danger">
+						required and must be a valid player ID
+					</span>
+				</div>
+				<div class="card-body">
+			<form name="createForm">
+				<div class="form-group">
+					<label for="idVenue" class="font-weight-bold">Venue ID</label>
+					<!--  <input ng-model="scorecard.idVenue" required
+						type="number" class="form-control" id="idVenue" name="idVenue">	-->
+						<select name="idVenue" ng-model="scorecard.idVenue">
+						<option value="">-- select venue--</option>
+      <option value="1017">Centennial Valley Golf</option>
+      <option value="117">Alotian</option>
+      <option value="1504">Blessings</option>
+      <option value="2456">Country Club of Little Rock</option>
+      <option value="7842">Diamante Country Club</option>
+      <option value="9853">Pinnacle Country Club</option>
+    </select>
+						
+							
+									
+					<span ng-show="createForm.idVenue.$touched && createForm.idVenue.$invalid"
+						class="text-danger">
+						required and must be a valid venue ID
+					</span>				
+				</div>
+				<div class="card-body">
+			<form name="createForm">
+				<div class="form-group">
+					<label for="toPar" class="font-weight-bold">To Par</label>
+					<input ng-model="scorecard.toPar" required
+						type="number" class="form-control" id="toPar" name="toPar">					
+					<span ng-show="createForm.toPar.$touched && createForm.toPar.$invalid"
+						class="text-danger">
+						required 
+					</span>
+				</div>
+				<div class="card-body">
+			<form name="createForm">
+				<div class="form-group">
+					<label for="score" class="font-weight-bold">Score</label>
+					<input ng-model="scorecard.score" required
+						type="number" class="form-control" id="score" name="score">					
+					<span ng-show="createForm.score.$touched && createForm.score.$invalid"
+						class="text-danger">
+						required 
+					</span>								
+			</form>
+		</div>
+		<div class="card-footer text-center">
+			<button type="button" class="btn btn-success"
+				ng-disabled="createForm.$invalid || disableCreate"
+				ng-click="createScorecard()">Create</button>			
+			<button type="button" class="btn btn-info"
+				ng-click="clear()">Clear</button>
+		</div>
+		</div>
+	</div>
+	<div class="col-sm-3">			
+	</div>
+</div>
