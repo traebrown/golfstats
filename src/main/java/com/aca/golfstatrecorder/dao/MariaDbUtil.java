@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class MariaDbUtil {
 	
 	private static String connectionUrl =
-			"jdbc:mariadb://localhost:3306/golfstattracker?user=root&password=TheBeast@52#93";
+			"jdbc:mariadb://localhost:3306/golfstattracker?user=root&;
 	
 	public static Connection getConnection() {
 		Connection connection = null;
